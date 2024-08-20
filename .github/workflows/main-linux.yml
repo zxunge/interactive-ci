@@ -1,0 +1,11 @@
+name: Ubuntu
+on:
+  workflow_dispatch:
+  #watch:
+  #  types: started
+jobs:
+  Ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - name: SSH connection to Actions
+      uses: csexton/debugger-action@master
