@@ -7,9 +7,5 @@ jobs:
   Ubuntu:
     runs-on: windows-latest
     steps:
-    
-    - uses: msys2/setup-msys2@v2
-      with:
-        location: D:\
     - name: SSH connection to Actions
       uses: csexton/debugger-action@master
