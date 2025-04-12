@@ -5,11 +5,15 @@ on:
   #  types: started
 jobs:
   Windows:
+    strategy:
+      matrix: 
+        msystem: [mingw32, ucrt64]
+        
     runs-on: windows-latest
     steps:
     - uses: msys2/setup-msys2@v2
       with:
-        msystem: ucrt64
+        msystem: ${{ matrix.msystem }}
         update: true
         install: >-
           tmate
